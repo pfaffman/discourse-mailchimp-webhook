@@ -1,0 +1,5 @@
+plugins:
+  discourse_mailchimp_webhook_enabled:
+    default: true
+  mailchimp_list_id:
+    default: '1234567890'

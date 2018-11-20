@@ -1,0 +1,4 @@
+en:
+  site_settings:
+    discourse_user_created_webhook_enabled: "Enable Discourse user created webhook plugin"
+    mailchimp_list_id: "List ID (probably 10 digit hex)"
