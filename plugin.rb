@@ -2,6 +2,8 @@
 # version: 0.1
 # authors: Jay Pfaffman (jay@literatecomputing.com)
 
+# based on stuff I got here:  https://meta.discourse.org/t/setting-up-webhooks/49045
+
 PLUGIN_NAME = 'discourse_mailchimp_webhook'.freeze
 
 enabled_site_setting :discourse_mailchimp_webhook_enabled
@@ -62,6 +64,6 @@ after_initialize do
 
       body # remember to return the object, otherwise the payload would be empty
     end
-  end
+   end
 
 end
