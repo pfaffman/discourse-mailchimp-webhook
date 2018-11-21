@@ -3,3 +3,7 @@ plugins:
     default: true
   mailchimp_list_id:
     default: '1234567890'
+  mailchimp_api_key:
+    default: ''
+  mailchimp_dc:
+    default: 'us10'
