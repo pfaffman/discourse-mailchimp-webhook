@@ -3,4 +3,4 @@ en:
     discourse_mailchimp_webhook_enabled: "Enable Discourse user created webhook plugin"
     mailchimp_list_id: "List ID (probably 10 digit hex)"
     mailchimp_api_key: "Mailchimp API key"
-    mailchimp_dc: "Mailchimp Data Center"
+    mailchimp_dc: "Mailchimp Data Center--If the last part of your Mailchimp API key is us6, then this is us6"
