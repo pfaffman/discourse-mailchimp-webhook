@@ -1,6 +1,6 @@
 # name: discourse-mailchimp-webhook
-# version: 0.1
-# authors: Jay Pfaffman (jay@literatecomputing.com) and Angus McLeod
+# version: 0.2
+# authors: Jay Pfaffman (jay@literatecomputing.com), Angus McLeod and HappyPorch
 
 PLUGIN_NAME = 'discourse_mailchimp_webhook'.freeze
 
@@ -16,9 +16,21 @@ after_initialize do
     WebHook.enqueue_object_hooks(:user_created, user, 'user_created', MailchimpSerializer)
   end
 
+  DiscourseEvent.on(:user_approved) do |user|
+    WebHook.enqueue_object_hooks(:user_approved, user, 'user_approved', MailchimpSerializer)
+  end
+
   Plugin::Filter.register(:after_build_web_hook_body) do |context, body|
-    body['user_created'].each do |param, value|
-      body[param] = value
+    if body['user_created']
+      body['user_created'].each do |param, value|
+        body[param] = value
+      end
+    end
+
+    if body['user_approved']
+      body['user_approved'].each do |param, value|
+        body[param] = value
+      end
     end
     
     body
