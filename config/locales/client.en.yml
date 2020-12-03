@@ -5,3 +5,6 @@ en:
         user_created_event:
           name: "User Created Event"
           details: "When there is a new user created."
+        user_approved_event:
+          name: "User Approved Event"
+          details: "When a new user has been approved."

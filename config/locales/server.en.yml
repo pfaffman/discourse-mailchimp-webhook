@@ -1,6 +1,6 @@
 en:
   site_settings:
-    discourse_mailchimp_webhook_enabled: "Enable Discourse user created webhook plugin"
+    discourse_mailchimp_webhook_enabled: "Enable Discourse user created/approved webhook plugin"
     mailchimp_list_id: "List ID (probably 10 digit hex)"
     mailchimp_api_key: "Mailchimp API key"
     mailchimp_dc: "Mailchimp Data Center--If the last part of your Mailchimp API key is us6, then this is us6"
