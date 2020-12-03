@@ -21,12 +21,16 @@ after_initialize do
   end
 
   Plugin::Filter.register(:after_build_web_hook_body) do |context, body|
-    body['user_created'].each do |param, value|
-      body[param] = value
+    if body['user_created']
+      body['user_created'].each do |param, value|
+        body[param] = value
+      end
     end
 
-    body['user_approved'].each do |param, value|
-      body[param] = value
+    if body['user_approved']
+      body['user_approved'].each do |param, value|
+        body[param] = value
+      end
     end
     
     body

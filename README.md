@@ -1,6 +1,6 @@
-# Discourse User Created Webhook
+# Discourse User Created/Approved Webhook
 
-This should add a user to a mailchimp list when their user is created in Discourse.
+This should add a user to a mailchimp list when their user is created or approved in Discourse.
 
 The client that I developed this for no longer uses Discourse, so I don't have means (or much desire) to test it.
 
